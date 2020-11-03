@@ -1,3 +1,2 @@
 # ux-testing
-Test pages for varios UX components
-Jelou guorld
+Test pages for various UX components
