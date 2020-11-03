@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <style>
+            #main {
+                width: 50%;
+                margin: 0;
+            }
+            
+            #instructions {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                padding: 8px 16px 16px;
+                color: #000;
+                border: 1px solid #A1A1A1;
+                width: 30%;
+                font-size: 16px;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+                line-height: 1.5;
+            }
+            
+            #instructions h1 {
+                font-size: 32px;
+                font-weight: bold;
+                margin: 0;
+            }
+            
+            label {
+                color: #565656;
+                margin: 0 0 4px;
+            }
+            
+            label, input, select {
+                font-size: 16px;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            }
+            
+            input, select {
+                color: #222222;
+                border: 1px solid #A1A1A1;
+                border-radius: 12px;
+                height: 2.5rem;
+                padding: 0 12px;
+                font-size: 17px;
+                width: 100%;
+            }
+            
+            input:focus, select:focus {
+                border-color: #3BBFAC;
+                outline: none;
+            }
+            
+            input.submitter {
+                outline: none;
+                border: none;
+                background: #3BBFAC;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 12px;
+                height: 3rem;
+                font-size: 17px;
+                margin: 0 0 24px;
+            }
+            
+            .clearfix {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            
+            .row {
+                margin: 0 0 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="row" id="main">
+            <div id="instructions">
+                <h1>Instructions</h1>
+                <ol>
+                <li>Type "XYZ Communications" as the Account Name.</li>
+                <li>Add the following email address to the Support Email field: support@help.com </li>
+                <li>Add the following PIN to the Voicemail PIN field: 8725</li>
+                <li>Select ‘Admin’ as Account Type</li>
+                <li>Add the following phone number to the ‘Redirect Calls to’ field: (555) 765 8717.</li>
+                <li>Click "Submit"</li>
+                </ol>
+            </div>
+            <form>
+                <div class="row">
+                    <div>
+                    <label for="act_name" class="clearfix">Account Name</label>
+                    <input id="act_name" type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="act_type" class="clearfix">Account Type</label>
+                    <select>
+                    <option value="" disabled selected>Choose Account Type</option>
+                    <option value="1">Standard</option>
+                    <option value="2">Admin</option>
+                    <option value="3">Guest</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div>
+                    <label for="email" class="clearfix">Support Email</label>
+                    <input id="email" type="email" class="clearfix">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>
+                    <label for="disabled" class="clearfix">Extension</label>
+                    <input disabled value="1024" id="disabled" type="text" class="clearfix">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>
+                    <label for="redirect" class="clearfix">Redirect Calls to</label>
+                    <input id="redirect" type="tel" class="clearfix">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>
+                    <label for="pin" class="clearfix">Voicemail PIN</label>
+                    <input id="pin" type="password" class="clearfix">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" class="submitter">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
